@@ -95,12 +95,6 @@ First download the publish qlpack and then run
 
 `codeql database analyze` 
 
-## CodeQL Query Suites 
-
-
-CodeQL query suites provide a way of selecting queries, based on their filename, location on disk or in a CodeQL pack, or metadata properties. Create query suites for the queries that you want to frequently use in your CodeQL analyses.
-
-Any custom queries that you want to add to a query suite must be in a CodeQL pack and contain the correct query metadata.
 ## New Dataflow Library 
 
 Specifies configurations as a parameterized module instead of a class
@@ -119,8 +113,3 @@ You need to instantiate a parameterized module to get a specialized version of d
 The parameterized module is then used to specify the type of the data flow nodes `ConfigFlow::PathNode`
 
 Flow predicate calls are made like so `ConfigFlow:: hasFlowPath(source, sink)`
-
-
-pack.yml` file tells CodeQL how to compile any queries in the pack, what libraries the pack depends on, and where to find query suite definitions.
-
-When executing query-related commands, CodeQL first looks in siblings of the installation directory (and their subdirectories) for `qlpack.yml` files. Then it checks the package cache for CodeQL packs which have been downloaded.
